@@ -1,0 +1,235 @@
+---- Minecraft Crash Report ----
+// My bad.
+
+Time: 4/12/17 4:45 AM
+Description: Initializing game
+
+java.lang.IllegalArgumentException: Duplicate enchantment id! class tb.common.enchantment.EnchantmentTainted and class evilcraft.enchantment.EnchantmentBreaking Enchantment ID:101
+	at net.minecraft.enchantment.Enchantment.<init>(Enchantment.java:53)
+	at tb.common.enchantment.EnchantmentTainted.<init>(EnchantmentTainted.java:11)
+	at tb.init.TBEnchant.setup(TBEnchant.java:24)
+	at tb.core.TBCore.preInit(TBCore.java:71)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at cpw.mods.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:532)
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.sendEventToModContainer(LoadController.java:212)
+	at cpw.mods.fml.common.LoadController.propogateStateMessage(LoadController.java:190)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.distributeStateMessage(LoadController.java:119)
+	at cpw.mods.fml.common.Loader.preinitializeMods(Loader.java:556)
+	at cpw.mods.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:243)
+	at net.minecraft.client.Minecraft.func_71384_a(Minecraft.java:480)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:878)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.multimc.onesix.OneSixLauncher.launchWithMainClass(OneSixLauncher.java:236)
+	at org.multimc.onesix.OneSixLauncher.launch(OneSixLauncher.java:297)
+	at org.multimc.EntryPoint.listen(EntryPoint.java:162)
+	at org.multimc.EntryPoint.main(EntryPoint.java:53)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.enchantment.Enchantment.<init>(Enchantment.java:53)
+	at tb.common.enchantment.EnchantmentTainted.<init>(EnchantmentTainted.java:11)
+	at tb.init.TBEnchant.setup(TBEnchant.java:24)
+	at tb.core.TBCore.preInit(TBCore.java:71)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at cpw.mods.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:532)
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.sendEventToModContainer(LoadController.java:212)
+	at cpw.mods.fml.common.LoadController.propogateStateMessage(LoadController.java:190)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.distributeStateMessage(LoadController.java:119)
+	at cpw.mods.fml.common.Loader.preinitializeMods(Loader.java:556)
+	at cpw.mods.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:243)
+	at net.minecraft.client.Minecraft.func_71384_a(Minecraft.java:480)
+
+-- Initialization --
+Details:
+Stacktrace:
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:878)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.multimc.onesix.OneSixLauncher.launchWithMainClass(OneSixLauncher.java:236)
+	at org.multimc.onesix.OneSixLauncher.launch(OneSixLauncher.java:297)
+	at org.multimc.EntryPoint.listen(EntryPoint.java:162)
+	at org.multimc.EntryPoint.main(EntryPoint.java:53)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_121, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1799243896 bytes (1715 MB) / 3310878720 bytes (3157 MB) up to 10252976128 bytes (9778 MB)
+	JVM Flags: 3 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xms512m -Xmx11000m
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1614 87 mods loaded, 87 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCH	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCH	FML{7.10.99.99} [Forge Mod Loader] (forge-1.7.10-10.13.4.1614-1.7.10-universal.jar) 
+	UCH	Forge{10.13.4.1614} [Minecraft Forge] (forge-1.7.10-10.13.4.1614-1.7.10-universal.jar) 
+	UCH	AM2-Preloader{0.0.3} [AMCore] (minecraft.jar) 
+	UCH	CodeChickenCore{1.0.7.47} [CodeChicken Core] (minecraft.jar) 
+	UCH	MobiusCore{1.2.5} [MobiusCore] (minecraft.jar) 
+	UCH	NotEnoughItems{1.0.5.120} [Not Enough Items] (NotEnoughItems-1.7.10-1.0.5.120-universal.jar) 
+	UCH	technomCore{0.12.5} [Technomancy Core] (minecraft.jar) 
+	UCH	ThaumicTinkerer-preloader{0.1} [Thaumic Tinkerer Core] (minecraft.jar) 
+	UCH	WitchingGadgetsCore{1.1.10} [Witching Gadgets Core] (minecraft.jar) 
+	UCH	<CoFH ASM>{000} [CoFH ASM] (minecraft.jar) 
+	UCH	mod_ThreadedLighting{1.7.10-1.0} [Threaded Lighting] (minecraft.jar) 
+	UCH	gilded-games-util{1.7.10-1.2} [Gilded Games Utility] (gilded-games-util-1.7.10-1.9.jar) 
+	UCH	AnimationAPI{1.2.4} [AnimationAPI] (AnimationAPI-1.7.10-1.2.4.jar) 
+	UCH	arsmagica2{1.4.0.009} [Ars Magica 2] (1.7.10_AM2-1.4.0.009.jar) 
+	UCH	abyssalcraft{1.9.1.3} [AbyssalCraft] (AbyssalCraft-1.7.10-1.9.1.3-FINAL.jar) 
+	UCH	Enchiridion{1.3} [Enchiridion] (Enchiridion 2-1.7.10-2.0.2a.jar) 
+	UCH	Baubles{1.0.1.10} [Baubles] (Baubles-1.7.10-1.0.1.10.jar) 
+	UCH	adventurersamulets{1.7.10-1.5.0c} [Adventurer's Amulets] (AdventurersAmulets-1.7.10-1.5.0c.jar) 
+	UCH	aether{1.7.10-1.6} [Aether II] (aether-1.7.10-1.6.jar) 
+	UCH	Thaumcraft{4.2.3.5} [Thaumcraft] (Thaumcraft-1.7.10-4.2.3.5.jar) 
+	UCH	AetherAspects{Alpha 1.7.10-1.2} [Aether Aspects] (AetherAspects-1.7.10-1.2.jar) 
+	UCH	algaecraft{1.5.8} [AlgaeCraft] (algaecraft-[1.7.10]1.5.10.jar) 
+	UCH	archmagus{0.7.0} [Archmagus] (Archmagus-1.7.10-0.7.0.jar) 
+	UCH	BattleTowers{1.5.1} [Battle Towers] (BattleTowers-1.7.10.jar) 
+	UCH	BiomesOPlenty{2.1.0} [Biomes O' Plenty] (BiomesOPlenty-1.7.10-2.1.0.1889-universal.jar) 
+	UCH	AWWayofTime{v1.3.3} [Blood Magic: Alchemical Wizardry] (BloodMagic-1.7.10-1.3.3-17.jar) 
+	UCH	Botania{r1.8-249} [Botania] (Botania r1.8-249.jar) 
+	UCH	brewingapi{1.2.0} [Brewing-API] (Brewing-API-1.7.2-1.2.0.jar) 
+	UCH	CoFHCore{1.7.10R3.1.4} [CoFH Core] (CoFHCore-[1.7.10]3.1.4-329.jar) 
+	UCH	BuildCraft|Core{7.1.21} [BuildCraft] (buildcraft-7.1.21.jar) 
+	UCH	BuildCraft|Builders{7.1.21} [BC Builders] (buildcraft-7.1.21.jar) 
+	UCH	BuildCraft|Energy{7.1.21} [BC Energy] (buildcraft-7.1.21.jar) 
+	UCH	BuildCraft|Factory{7.1.21} [BC Factory] (buildcraft-7.1.21.jar) 
+	UCH	BuildCraft|Robotics{7.1.21} [BC Robotics] (buildcraft-7.1.21.jar) 
+	UCH	BuildCraft|Silicon{7.1.21} [BC Silicon] (buildcraft-7.1.21.jar) 
+	UCH	BuildCraft|Transport{7.1.21} [BC Transport] (buildcraft-7.1.21.jar) 
+	UCH	Forestry{4.2.16.64} [Forestry for Minecraft] (forestry_1.7.10-4.2.16.64.jar) 
+	UCH	ThermalFoundation{1.7.10R1.2.6} [Thermal Foundation] (ThermalFoundation-[1.7.10]1.2.6-118.jar) 
+	UCH	ThermalExpansion{1.7.10R4.1.5} [Thermal Expansion] (ThermalExpansion-[1.7.10]4.1.5-248.jar) 
+	UCH	BuildCraft|Compat{7.1.6} [BuildCraft Compat] (buildcraft-compat-7.1.6.jar) 
+	UCH	craftingpillars{1.6.0} [Crafting Pillars Mod] (CraftingPillars-1.7.x-1.6.1.jar) 
+	UCH	DummyCore{1.13} [DummyCore] (DummyCore1.13.jar) 
+	UCH	Enchiridion2{2.0.2a} [Enchiridion 2] (Enchiridion 2-1.7.10-2.0.2a.jar) 
+	UCH	EnderIO{1.7.10-2.2.8.381} [Ender IO] (EnderIO-1.7.10-2.2.8.381.jar) 
+	UCH	evilcraft{0.9.12} [EvilCraft] (EvilCraft-1.7.10-0.9.12.jar) 
+	UCH	ExtraUtilities{1.2.12} [Extra Utilities] (extrautilities-1.2.12.jar) 
+	UCH	Mantle{1.7.10-0.3.2.jenkins191} [Mantle] (Mantle-1.7.10-0.3.2b.jar) 
+	UCH	Waila{1.5.10} [Waila] (Waila-1.5.10_1.7.10.jar) 
+	UCH	TConstruct{1.7.10-1.8.8.build988} [Tinkers' Construct] (TConstruct-1.7.10-1.8.8.jar) 
+	UCH	ExtraTiC{1.4.6} [ExtraTiC] (ExtraTiC-1.7.10-1.4.6.jar) 
+	UCH	ThaumicTinkerer{unspecified} [Thaumic Tinkerer] (ThaumicTinkerer-2.5-1.7.10-164.jar) 
+	UCH	ForbiddenMagic{1.7.10-0.575} [Forbidden Magic] (Forbidden Magic-1.7.10-0.575.jar) 
+	UCH	gadomancy{1.0.7.3} [Gadomancy] (gadomancy-1.7.10-1.0.7.3.jar) 
+	UCH	HardcoreQuesting{4.4.4} [Hardcore Questing Mode] (HQM-The Journey-4.4.4.jar) 
+	UCH	ImLookingAtBlood{1.1} [I'm Looking At Blood] (ImLookingAtBlood-1.7.2-1.1a.jar) 
+	UCH	InfernalMobs{1.6.0} [Infernal Mobs] (InfernalMobs-1.7.10.jar) 
+	UCH	IronChest{6.0.60.741} [Iron Chest] (ironchest-1.7.10-6.0.60.741-universal.jar) 
+	UCH	MagicBees{2.4.3} [Magic Bees] (magicbees-1.7.10-2.4.3.jar) 
+	UCH	MineTweaker3{3.0.10} [MineTweaker 3] (MineTweaker3-1.7.10-3.0.10B.jar) 
+	UCH	NEIAddons{1.12.14.40} [NEI Addons] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCH	NEIAddons|Developer{1.12.14.40} [NEI Addons: Developer Tools] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCH	NEIAddons|AppEng{1.12.14.40} [NEI Addons: Applied Energistics 2] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCH	NEIAddons|Botany{1.12.14.40} [NEI Addons: Botany] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCH	NEIAddons|Forestry{1.12.14.40} [NEI Addons: Forestry] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCH	NEIAddons|CraftingTables{1.12.14.40} [NEI Addons: Crafting Tables] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCH	NEIAddons|ExNihilo{1.12.14.40} [NEI Addons: Ex Nihilo] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCH	neiintegration{1.1.2} [NEI Integration] (NEIIntegration-MC1.7.10-1.1.2.jar) 
+	UCH	NodalMechanics{1.7.10R1.0} [NodalMechanics] (NodalMechanics-1.7-1.0-7.jar) 
+	UCH	neresources{0.1.0.ManuallyBuilt} [Not Enough Resources] (NotEnoughResources-1.7.10-0.1.0-122.jar) 
+	UCH	libsandstone{1.0.0} [libsandstone] (Reliquary-1.7.10-1.2.1.483.jar) 
+	UCH	xreliquary{1.2} [Reliquary] (Reliquary-1.7.10-1.2.1.483.jar) 
+	UCH	AS_Ruins{15.4} [Ruins Spawning System] (Ruins-1.7.10.jar) 
+	UCH	supercraftingframe{1.7.10.3} [Super Crafting Frame] (supercraftingframe-1.7.10.3.jar) 
+	UCH	TaintedMagic{r7.6} [Tainted Magic] (Tainted-Magic-r7.6.jar) 
+	UCH	ThaumcraftMobAspects{1.7.2-2A} [Thaumcraft Mob Aspects] (ThaumcraftMobAspects-1.7.2-2A.jar) 
+	UCH	thaumcraftneiplugin{@VERSION@} [Thaumcraft NEI Plugin] (thaumcraftneiplugin-1.7.10-1.7a.jar) 
+	UCH	thaumicdyes{1.7.0} [Thaumic Dyes] (Thaumic-Dyes-[1.7.10] 1.7.0-4.jar) 
+	UCE	thaumicbases{1.3.1710.2} [Thaumic Bases] (ThaumicBases-1.3.1710.4.jar) 
+	UCH	ThaumicExploration{0.6.0} [Thaumic Exploration] (ThaumicExploration-1.7.10-1.1-53.jar) 
+	UCH	ThaumicHorizons{1.1.9} [Thaumic Horizons] (thaumichorizons-1.7.10-1.1.9.jar) 
+	UCH	elysium{1.0} [The Elysium] (TheElysium-1.7.x-1.0.3.jar) 
+	UCH	TravellersGear{1.16.6} [Traveller's Gear] (TravellersGear-1.7.10-1.16.6.jar) 
+	UCH	WailaHarvestability{1.1.6} [Waila Harvestability] (WailaHarvestability-mc1.7.10-1.1.6.jar) 
+	UCH	witchery{0.24.1} [Witchery] (witchery-1.7.10-0.24.1.jar) 
+	UCH	WitchingGadgets{1.1.10} [Witching Gadgets] (WitchingGadgets-1.7.10-1.1.10.jar) 
+	UCH	technom{0.12.5} [Technomancy] (Technomancy - 0.12.5 - 1.7.10.jar) 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.5.0 NVIDIA 378.66' Renderer: 'GeForce GTX 1070/PCIe/SSE2'
+	CoFHCore: -[1.7.10]3.1.4-329
+	ThermalFoundation: -[1.7.10]1.2.6-118
+	ThermalExpansion: -[1.7.10]4.1.5-248
+	Mantle Environment: Environment healthy.
+	TConstruct Environment: Environment healthy.
+	Launched Version: MultiMC5
+	LWJGL: 2.9.1
+	OpenGL: GeForce GTX 1070/PCIe/SSE2 GL version 4.5.0 NVIDIA 378.66, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

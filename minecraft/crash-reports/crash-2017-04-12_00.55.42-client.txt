@@ -1,0 +1,149 @@
+---- Minecraft Crash Report ----
+// Hey, that tickles! Hehehe!
+
+Time: 4/12/17 12:55 AM
+Description: There was a severe problem during mod loading that has caused the game to fail
+
+cpw.mods.fml.common.LoaderException: java.lang.NoClassDefFoundError: com/agadar/brewingapi/BrewingRecipes
+	at cpw.mods.fml.common.LoadController.transition(LoadController.java:163)
+	at cpw.mods.fml.common.Loader.preinitializeMods(Loader.java:559)
+	at cpw.mods.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:243)
+	at net.minecraft.client.Minecraft.func_71384_a(Minecraft.java:480)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:878)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.multimc.onesix.OneSixLauncher.launchWithMainClass(OneSixLauncher.java:236)
+	at org.multimc.onesix.OneSixLauncher.launch(OneSixLauncher.java:297)
+	at org.multimc.EntryPoint.listen(EntryPoint.java:162)
+	at org.multimc.EntryPoint.main(EntryPoint.java:53)
+Caused by: java.lang.NoClassDefFoundError: com/agadar/brewingapi/BrewingRecipes
+	at com.agadar.archmagus.itemblock.ItemPotionBase.getManaStack(ItemPotionBase.java:71)
+	at com.agadar.archmagus.itemblock.ModItemsBlocks.registerModItemsAndBlocks(ModItemsBlocks.java:69)
+	at com.agadar.archmagus.Archmagus.preInit(Archmagus.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at cpw.mods.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:532)
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.sendEventToModContainer(LoadController.java:212)
+	at cpw.mods.fml.common.LoadController.propogateStateMessage(LoadController.java:190)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.distributeStateMessage(LoadController.java:119)
+	at cpw.mods.fml.common.Loader.preinitializeMods(Loader.java:556)
+	... 18 more
+Caused by: java.lang.ClassNotFoundException: com.agadar.brewingapi.BrewingRecipes
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:191)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 47 more
+Caused by: java.lang.NullPointerException
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_121, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1164321552 bytes (1110 MB) / 2366636032 bytes (2257 MB) up to 10252976128 bytes (9778 MB)
+	JVM Flags: 3 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xms512m -Xmx11000m
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1614 64 mods loaded, 64 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCH	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCH	FML{7.10.99.99} [Forge Mod Loader] (forge-1.7.10-10.13.4.1614-1.7.10-universal.jar) 
+	UCH	Forge{10.13.4.1614} [Minecraft Forge] (forge-1.7.10-10.13.4.1614-1.7.10-universal.jar) 
+	UCH	AM2-Preloader{0.0.3} [AMCore] (minecraft.jar) 
+	UCH	CodeChickenCore{1.0.7.47} [CodeChicken Core] (minecraft.jar) 
+	UCH	MobiusCore{1.2.5} [MobiusCore] (minecraft.jar) 
+	UCH	NotEnoughItems{1.0.5.120} [Not Enough Items] (NotEnoughItems-1.7.10-1.0.5.120-universal.jar) 
+	UCH	<CoFH ASM>{000} [CoFH ASM] (minecraft.jar) 
+	UCH	mod_ThreadedLighting{1.7.10-1.0} [Threaded Lighting] (minecraft.jar) 
+	UCH	gilded-games-util{1.7.10-1.2} [Gilded Games Utility] (gilded-games-util-1.7.10-1.9.jar) 
+	UCH	AnimationAPI{1.2.4} [AnimationAPI] (AnimationAPI-1.7.10-1.2.4.jar) 
+	UCH	arsmagica2{1.4.0.009} [Ars Magica 2] (1.7.10_AM2-1.4.0.009.jar) 
+	UCH	abyssalcraft{1.9.1.3} [AbyssalCraft] (AbyssalCraft-1.7.10-1.9.1.3-FINAL.jar) 
+	UCH	Enchiridion{1.3} [Enchiridion] (Enchiridion 2-1.7.10-2.0.2a.jar) 
+	UCH	Baubles{1.0.1.10} [Baubles] (Baubles-1.7.10-1.0.1.10.jar) 
+	UCH	adventurersamulets{1.7.10-1.5.0c} [Adventurer's Amulets] (AdventurersAmulets-1.7.10-1.5.0c.jar) 
+	UCH	aether{1.7.10-1.6} [Aether II] (aether-1.7.10-1.6.jar) 
+	UCH	Thaumcraft{4.2.3.5} [Thaumcraft] (Thaumcraft-1.7.10-4.2.3.5.jar) 
+	UCH	AetherAspects{Alpha 1.7.10-1.2} [Aether Aspects] (AetherAspects-1.7.10-1.2.jar) 
+	UCE	archmagus{0.7.0} [Archmagus] (Archmagus-1.7.10-0.7.0.jar) 
+	UCH	BattleTowers{1.5.1} [Battle Towers] (BattleTowers-1.7.10.jar) 
+	UCH	BiomesOPlenty{2.1.0} [Biomes O' Plenty] (BiomesOPlenty-1.7.10-2.1.0.1889-universal.jar) 
+	UCH	AWWayofTime{v1.3.3} [Blood Magic: Alchemical Wizardry] (BloodMagic-1.7.10-1.3.3-17.jar) 
+	UCH	Botania{r1.8-249} [Botania] (Botania r1.8-249.jar) 
+	UCH	CoFHCore{1.7.10R3.1.4} [CoFH Core] (CoFHCore-[1.7.10]3.1.4-329.jar) 
+	UCH	BuildCraft|Core{7.1.21} [BuildCraft] (buildcraft-7.1.21.jar) 
+	UCH	BuildCraft|Builders{7.1.21} [BC Builders] (buildcraft-7.1.21.jar) 
+	UCH	BuildCraft|Energy{7.1.21} [BC Energy] (buildcraft-7.1.21.jar) 
+	UCH	BuildCraft|Factory{7.1.21} [BC Factory] (buildcraft-7.1.21.jar) 
+	UCH	BuildCraft|Robotics{7.1.21} [BC Robotics] (buildcraft-7.1.21.jar) 
+	UCH	BuildCraft|Silicon{7.1.21} [BC Silicon] (buildcraft-7.1.21.jar) 
+	UCH	BuildCraft|Transport{7.1.21} [BC Transport] (buildcraft-7.1.21.jar) 
+	UCH	Forestry{4.2.16.64} [Forestry for Minecraft] (forestry_1.7.10-4.2.16.64.jar) 
+	UCH	ThermalFoundation{1.7.10R1.2.6} [Thermal Foundation] (ThermalFoundation-[1.7.10]1.2.6-118.jar) 
+	UCH	ThermalExpansion{1.7.10R4.1.5} [Thermal Expansion] (ThermalExpansion-[1.7.10]4.1.5-248.jar) 
+	UCH	BuildCraft|Compat{7.1.6} [BuildCraft Compat] (buildcraft-compat-7.1.6.jar) 
+	UCH	craftingpillars{1.6.0} [Crafting Pillars Mod] (CraftingPillars-1.7.x-1.6.1.jar) 
+	UCH	Enchiridion2{2.0.2a} [Enchiridion 2] (Enchiridion 2-1.7.10-2.0.2a.jar) 
+	UCH	HardcoreQuesting{4.4.4} [Hardcore Questing Mode] (HQM-The Journey-4.4.4.jar) 
+	UCH	Waila{1.5.10} [Waila] (Waila-1.5.10_1.7.10.jar) 
+	UCH	ImLookingAtBlood{1.1} [I'm Looking At Blood] (ImLookingAtBlood-1.7.2-1.1a.jar) 
+	UCH	InfernalMobs{1.6.0} [Infernal Mobs] (InfernalMobs-1.7.10.jar) 
+	UCH	MagicBees{2.4.3} [Magic Bees] (magicbees-1.7.10-2.4.3.jar) 
+	UCH	MineTweaker3{3.0.10} [MineTweaker 3] (MineTweaker3-1.7.10-3.0.10B.jar) 
+	UCH	NEIAddons{1.12.14.40} [NEI Addons] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCH	NEIAddons|Developer{1.12.14.40} [NEI Addons: Developer Tools] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCH	NEIAddons|AppEng{1.12.14.40} [NEI Addons: Applied Energistics 2] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCH	NEIAddons|Botany{1.12.14.40} [NEI Addons: Botany] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCH	NEIAddons|Forestry{1.12.14.40} [NEI Addons: Forestry] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCH	NEIAddons|CraftingTables{1.12.14.40} [NEI Addons: Crafting Tables] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCH	NEIAddons|ExNihilo{1.12.14.40} [NEI Addons: Ex Nihilo] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCH	neiintegration{1.1.2} [NEI Integration] (NEIIntegration-MC1.7.10-1.1.2.jar) 
+	UCH	neresources{0.1.0.ManuallyBuilt} [Not Enough Resources] (NotEnoughResources-1.7.10-0.1.0-122.jar) 
+	UCH	libsandstone{1.0.0} [libsandstone] (Reliquary-1.7.10-1.2.1.483.jar) 
+	UCH	xreliquary{1.2} [Reliquary] (Reliquary-1.7.10-1.2.1.483.jar) 
+	UCH	AS_Ruins{15.4} [Ruins Spawning System] (Ruins-1.7.10.jar) 
+	UCH	supercraftingframe{1.7.10.3} [Super Crafting Frame] (supercraftingframe-1.7.10.3.jar) 
+	UCH	ThaumcraftMobAspects{1.7.2-2A} [Thaumcraft Mob Aspects] (ThaumcraftMobAspects-1.7.2-2A.jar) 
+	UCH	thaumcraftneiplugin{@VERSION@} [Thaumcraft NEI Plugin] (thaumcraftneiplugin-1.7.10-1.7a.jar) 
+	UCH	thaumicdyes{1.7.0} [Thaumic Dyes] (Thaumic-Dyes-[1.7.10] 1.7.0-4.jar) 
+	UCH	ThaumicHorizons{1.1.9} [Thaumic Horizons] (thaumichorizons-1.7.10-1.1.9.jar) 
+	UCH	elysium{1.0} [The Elysium] (TheElysium-1.7.x-1.0.3.jar) 
+	UCH	WailaHarvestability{1.1.6} [Waila Harvestability] (WailaHarvestability-mc1.7.10-1.1.6.jar) 
+	UCH	witchery{0.24.1} [Witchery] (witchery-1.7.10-0.24.1.jar) 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.5.0 NVIDIA 378.66' Renderer: 'GeForce GTX 1070/PCIe/SSE2'
+	CoFHCore: -[1.7.10]3.1.4-329
+	ThermalFoundation: -[1.7.10]1.2.6-118
+	ThermalExpansion: -[1.7.10]4.1.5-248

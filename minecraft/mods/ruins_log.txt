@@ -1,0 +1,13 @@
+
+Loading excluded list from: C:\Users\lolno\Desktop\MultiMC\instances\E-K Adventure\minecraft\saves\ASDOIASD\DIM-37
+No exclusions found for this world.
+
+Loading options from: C:\Users\lolno\Desktop\MultiMC\instances\E-K Adventure\minecraft\saves\ASDOIASD\DIM-37
+tries_per_chunk_normal = 6
+chance_to_spawn_normal = 10.0
+templateInstancesMinDistance = 256.0
+anyRuinsMinDistance = 64.0
+Ruins mod loaded successfully for world C:\Users\lolno\Desktop\MultiMC\instances\E-K Adventure\minecraft\saves\ASDOIASD\DIM-37, template files: 32
+insMinDistance = 64.0
+Ruins mod loaded successfully for world C:\Users\lolno\Desktop\MultiMC\instances\E-K Adventure\minecraft\saves\ASDOIASD\DIM-100, template files: 32
+
