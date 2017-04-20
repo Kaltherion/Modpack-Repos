@@ -1,0 +1,10 @@
+b 0 0 0 algaecraft:limestoneSlab 0
+b -1 0 0 algaecraft:limestone -1
+b 0 0 -1 "SOLID"
+b 1 1 -1 algaecraft:limestone -1
+b 0 1 -1 "LOG"
+b 1 0 0 algaecraft:limestone -1
+b -1 1 -1 algaecraft:limestone -1
+b 0 1 -2 algaecraft:limestone -1
+b 0 1 0 "FIRE"
+b 0 2 -1 algaecraft:limestone -1
